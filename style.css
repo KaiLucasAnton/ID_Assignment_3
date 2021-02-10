@@ -9,6 +9,10 @@ body {
     font-size: 20px;
 }
 
+html, body {
+    height: 100%;
+}
+
 *{
     margin: 0;
     padding:0;
@@ -60,23 +64,30 @@ li{
     display: flex;
     flex-direction: column;
 }
-/*body*/
-.tophehe {
-    height: 600px;
-    padding: 50px;
-    background-color: rgb(43, 135, 209);
+/*main page*/
+.main-container {
+    background-color: rgb(33, 33, 82);
     color:hsl(0, 0%, 100%);
+    height: 100%;
 }
-.topcontent {
-    text-align: center;
-    
+.main-content {
+    /* text-align: center;
+    width: 50%; */
+    left: 0;
+  top: 0;
+  width: 50%; /* Full width */
+  height: 50%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
 }
-
-.bot {
-    padding: 50px;
+.main-info {
+    background-color: #fefefe;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 50px;
+  border: 1px solid #888;
+  width: 65%; /* Could be more or less, depending on screen size */
+  background-color: rgb(36, 37, 41);
+  color: whitesmoke;
 }
-
-
 
 
 
