@@ -23,7 +23,7 @@ nav{
 }
 
 .nav-bar{
-    background: rgb(226, 63, 104)
+    background: rgb(79, 79, 79)
 }
 
 .nav-links{
@@ -60,6 +60,28 @@ li{
     display: flex;
     flex-direction: column;
 }
+/*body*/
+.tophehe {
+    height: 600px;
+    padding: 50px;
+    background-color: rgb(43, 135, 209);
+    color:hsl(0, 0%, 100%);
+}
+.topcontent {
+    text-align: center;
+    
+}
+
+.bot {
+    padding: 50px;
+}
+
+
+
+
+
+
+
 
 @media screen and (max-width:700px){
     body{
