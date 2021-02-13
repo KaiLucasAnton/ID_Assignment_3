@@ -2,6 +2,10 @@
     font-family: Libre Baskerville;
     color: white;
     font-size: 2vw;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(79, 79, 79);
+    text-align: center;
 }
 
 body {
@@ -19,6 +23,12 @@ html, body {
     box-sizing: border-box;
 }
 
+.link{
+    color: white;
+    font-size: 2vw;
+    text-decoration:none;
+} 
+
 nav{
     display: flex;
     justify-content: space-around;
@@ -27,7 +37,7 @@ nav{
 }
 
 .nav-bar{
-    background: rgb(79, 79, 79)
+    background: rgb(79, 79, 79);
 }
 
 .nav-links{
@@ -114,7 +124,9 @@ li{
         transition: transform 0.5s ease-in;
     }
     .link{
-        font-size: 20px;
+        color: white;
+        font-size: 2vw;
+        text-decoration:none;
     }
     .split {
         flex: 1 100%;
