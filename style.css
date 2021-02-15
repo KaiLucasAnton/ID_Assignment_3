@@ -111,7 +111,7 @@ li{
 
 .timer {
     position: absolute;
-    top: 25rem;
+    top: 20rem;
     /* pushing timer to the top */
     font-weight: bold;
     font-size: 3rem;
