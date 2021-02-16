@@ -110,7 +110,7 @@ li{
 }
 
 .s-container {
-    background-color:rgba(255, 166, 208, 0.801);
+    background-color:rgba(235, 223, 228, 0.801);
     padding: 1rem;
     border-radius: .5rem;
     width: 700px;
@@ -121,7 +121,7 @@ li{
 
 .timer {
     position: absolute;
-    top: 25rem;
+    top: 20rem;
     /* pushing timer to the top */
     font-weight: bold;
     font-size: 3rem;
@@ -152,6 +152,15 @@ li{
     border-color: black;
 }
 
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+    background-color: rgb(204, 182, 182);
+    text-decoration: underline;
+}
 
 
 
