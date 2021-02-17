@@ -37,7 +37,11 @@
                     <p>Test your ability to remember numbers</p>
                     <button id = "randNum" type="button" onclick="document.getElementById('num').innerHTML = 
                     randNo()">Start</button>
-                    <p id = "num"></p>
+                    <p id="level"></p>
+                    <div id = "numTime" style="display: none;">
+                        <p id = "num" ></p>
+                        <!-- <progress id="file" value="0" max="100" > </progress> -->
+                    </div>
                     <form id="submittion" onsubmit="return false" autocomplete="off" style="display: none;">
                         <input type="text" name="ans" id="ans"></br>
                         <input type="submit" value="Submit" id="subAns">
@@ -48,8 +52,7 @@
                     <div id="gameOver" style="display: none;">
                         <p id="correctAns"></p>
                         <p id="yourAns"></p>
-                        <button id = "newGame" type="button"
-                        onclick="">New Game</button>
+                        <button id = "newGame" type="button">New Game</button>
                     </div>
                 </div>
             </div>

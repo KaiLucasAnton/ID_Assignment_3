@@ -11,11 +11,18 @@ function randNo() {
     return answer
 } 
 
+/*
+function update() { 
+    $('#file')[0].value = /5000
+} 
+*/
+
 randNum.addEventListener("click", function(){
     $('#randNum').hide();
-    $('#num').show();
+    document.getElementById('level').innerHTML = "Level " + power;
+    $('#numTime').show();
     var fade_out = setInterval(function() {
-        $('#num').hide();
+        $('#numTime').hide();
         $('#submittion').show();
         clearInterval(fade_out)
     }, 5000);
@@ -42,9 +49,10 @@ subAns.addEventListener("click", function(){
 
 cont.addEventListener("click", function(){
     $('#cont').hide();
-    $('#num').show();
+    document.getElementById('level').innerHTML = "Level " + power;
+    $('#numTime').show();
     var fade_out = setInterval(function() {
-        $('#num').hide();
+        $('#numTime').hide();
         $('#submittion').show();
         clearInterval(fade_out)
     }, 5000);
@@ -54,10 +62,10 @@ cont.addEventListener("click", function(){
 newGame.addEventListener("click", function(){
     document.getElementById('num').innerHTML = randNo()
     $('#gameOver').hide();
-    randNo();
-    $('#num').show();
+    document.getElementById('level').innerHTML = "Level " + power;
+    $('#numTime').show();
     var fade_out = setInterval(function() {
-        $('#num').hide();
+        $('#numTime').hide();
         $('#submittion').show();
         clearInterval(fade_out)
     }, 5000);
