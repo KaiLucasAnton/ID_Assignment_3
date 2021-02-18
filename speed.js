@@ -133,3 +133,21 @@ function endGame() {
     $("#newGame").show();
     
 }
+
+//restDB
+let settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://speedhighscore-427e.restdb.io/rest/typingspeed/",
+    "method": "GET",
+    "headers": {
+      "content-type": "application/json",
+      "x-apikey": "602eb73c5ad3610fb5bb636d",
+      "cache-control": "no-cache"
+    },
+}
+var highScore = Math.floor(words/time * 60)
+
+$.ajax(settings).done(function (response) {
+    highScore = response[0].highscore
+});
