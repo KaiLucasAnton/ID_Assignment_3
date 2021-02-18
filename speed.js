@@ -9,12 +9,14 @@ const quoteInputElement = document.getElementById('quoteInput')
 quoteInputElement.addEventListener('input', () => {
     const arrayQuote = quoteDisplayELement.querySelectorAll('span')
     const arrayValue = quoteInputElement.value.split('')
+    var end = true;
     arrayQuote.forEach((characterSpan, index) => {
         const character = arrayValue[index]
         // to make sure only the entered characters are colored
         if (character == null) {
             characterSpan.classList.remove('correct')
             characterSpan.classList.remove('incorrect')
+            end = false;
         }
         // to make sure its only one class value
         else if (character === characterSpan.innerText) {
@@ -26,6 +28,16 @@ quoteInputElement.addEventListener('input', () => {
             characterSpan.classList.remove('correct')
         }
     })
+    document.body.onkeyup = function(e){
+        if(e.keyCode == 32){
+            words++;
+            console.log(words);
+            console.log(time);
+        }
+    }
+    if (end == true){
+        endGame()
+    }
 })
 
 // getting the api
@@ -50,3 +62,74 @@ async function NewQuote() {
 }
 
 NewQuote()
+
+// Stopwatch
+const timer = document.getElementById('stopwatch');
+
+var min = 0;
+var sec = 0;
+var time = 0;
+var stoptime = true;
+var startTime = false;
+
+quoteInput.addEventListener('input', function(){
+    startTimer();
+    document.getElementById('count').innerHTML = Math.floor(words/time * 60) + "wpm";
+    $('#startText').hide();
+    $('#count').show();
+});
+function startTimer() {
+  if (stoptime == true && startTime == false) {
+        startTime = true;
+        stoptime = false;
+        timerCycle();
+    }
+}
+function stopTimer() {
+  if (stoptime == false) {
+    stoptime = true;
+  }
+}
+
+function timerCycle() {
+    if (stoptime == false) {
+    sec = parseInt(sec);
+    min = parseInt(min);
+    sec = sec + 1;
+    time++;
+    if (sec == 60) {
+      min = min + 1;
+      sec = 0;
+    }
+    if (min == 60) {
+      min = 0;
+      sec = 0;
+    }
+    if (sec < 10 || sec == 0) {
+      sec = '0' + sec;
+    }
+    if (min < 10 || min == 0) {
+      min = '0' + min;
+    }
+
+    timer.innerHTML = min + ':' + sec;
+    setTimeout("timerCycle()", 1000);
+  }
+}
+
+function resetTimer() {
+    timer.innerHTML = '00:00';
+}
+
+//typing speed
+var words = 0;
+
+//finish game
+function endGame() {
+    stopTimer();
+    words++;
+    $('.quote-display').hide();
+    $("#quoteInput").hide();
+    $("#newGame").show();
+    
+}
