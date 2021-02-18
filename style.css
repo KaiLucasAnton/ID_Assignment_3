@@ -117,6 +117,11 @@ li{
     /* setting default width */
     max-width: 90%;
     /* so it dont go over the screen */
+    line-height: 4vh;
+}
+
+.centering {
+    text-align: center;
 }
 
 .timer {
