@@ -30,11 +30,12 @@
                 </nav>
             </section>
         </header>
-        <div class="main-container">
-            <div class="main-content">
-                <div class="main-info">
-                    <p>Test your ability to remember numbers</p>
-                    <button id = "randNum" type="button" onclick="document.getElementById('num').innerHTML = 
+        <div class="n-container">
+            <div class="n-content">
+                <div class="n-info">
+                    <p class="num-header">Test your ability to remember numbers</p>
+                    <br>
+                    <button class="button" id = "randNum" type="button" onclick="document.getElementById('num').innerHTML = 
                     randNo()">Start</button>
                     <p id="level"></p>
                     <div id = "numTime" style="display: none;">
@@ -44,15 +45,17 @@
                     <form id="submittion" onsubmit="return false" autocomplete="off" style="display: none;">
                         <input type="text" name="ans" id="ans"></br>
                         <br>
-                        <input  class="button" type="submit" value="Submit" id="subAns">
+                        <input class="button" class="button" type="submit" value="Submit" id="subAns">
                     </form>
-                    <button id = "cont" type="button" style="display: none;"
+                    <br>
+                    <button class="button" id = "cont" type="button" style="display: none;"
                     onclick="document.getElementById('num').innerHTML = 
                     randNo()">Continue</button>
                     <div id="gameOver" style="display: none;">
                         <p id="correctAns"></p>
                         <p id="yourAns"></p>
-                        <button id = "newGame" type="button">New Game</button>
+                        <br>
+                        <button class="button" id = "newGame" type="button">New Game</button>
                     </div>
                 </div>
             </div>
