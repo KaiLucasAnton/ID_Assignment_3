@@ -8,3 +8,4 @@ random numbers when button is clicked: https://www.w3schools.com/js/tryit.asp?fi
 making the number disappear: https://www.drupal.org/project/messagefx/issues/724180
 <!-- Speed Test API -->
 http://api.quotable.io/random
+stopwatch: https://dev.to/gspteck/create-a-stopwatch-in-javascript-2mak

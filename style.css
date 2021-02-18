@@ -120,7 +120,7 @@ li{
 }
 
 .timer {
-    position: absolute;
+    text-align: center;
     top: 20rem;
     /* pushing timer to the top */
     font-weight: bold;
