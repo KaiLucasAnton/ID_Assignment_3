@@ -97,6 +97,10 @@ li{
     color: black;
 }
 
+
+
+
+
 /* speed test */
 .s-content {
     display: flex;
@@ -121,7 +125,7 @@ li{
 
 .timer {
     position: absolute;
-    top: 20rem;
+    top: 10rem;
     /* pushing timer to the top */
     font-weight: bold;
     font-size: 3rem;
@@ -228,3 +232,41 @@ li{
 user-select: none;
 }
 
+.n-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    /* centering content */
+    margin: 0;
+    /* no scroll bar */
+    background-color: rgb(113, 151, 194);
+}
+
+.n-content {
+    background-color:rgba(235, 223, 228, 0.801);
+    padding: 1rem;
+    border-radius: .5rem;
+    width: 700px;
+    /* setting default width */
+    max-width: 90%;
+    /* so it dont go over the screen */
+    align-content: center;
+}
+
+.num-header {
+    font-weight: bold;
+    font-size: 2rem;
+    padding:1rem;
+}
+
+/* button */
+.button {
+    background-color:rgb(189, 125, 125);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: .5rem;
+}

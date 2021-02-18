@@ -25,7 +25,7 @@ randNum.addEventListener("click", function(){
         $('#numTime').hide();
         $('#submittion').show();
         clearInterval(fade_out)
-    }, 5000);
+    }, 3000);
     console.log(answer);
 });
 subAns.addEventListener("click", function(){
