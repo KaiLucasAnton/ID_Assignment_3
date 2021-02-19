@@ -71,6 +71,7 @@ var sec = 0;
 var time = 0;
 var stoptime = true;
 var startTime = false;
+var speed;
 
 quoteInput.addEventListener('input', function(){
     startTimer();
@@ -131,23 +132,66 @@ function endGame() {
     $('.quote-display').hide();
     $("#quoteInput").hide();
     $("#newGame").show();
-    
+    $("#stats").show();
+    //highscore
+    let settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://highscore-2d4d.restdb.io/rest/typingspeed",
+        "method": "GET",
+        "headers": {
+          "content-type": "application/json",
+          "x-apikey": "602f62a05ad3610fb5bb6396",
+          "cache-control": "no-cache"
+        },
+    }
+    score = Math.floor(words/time * 60);
+    $.ajax(settings).done(function (response) {
+        var i;
+        for (i = 0; i < response.length; i++) {
+            if(response[i].highscore > score){
+                highscore = response.highscore;
+            }
+            else{
+                highscore = score;
+            }
+        }
+    });
+    //average
+    $.ajax(settings).done(function (response) {
+        var i;
+        var total;
+        for (i = 0; i < response.length; i++) {
+            total += response[i].highscore;
+        }
+        averge = total/i;
+    });
+
+    let score = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://highscore-2d4d.restdb.io/rest/typingspeed",
+        "method": "POST",
+        "headers": {
+          "content-type": "application/json",
+          "x-apikey": "602f62a05ad3610fb5bb6396",
+          "cache-control": "no-cache"
+        },
+    }
 }
 
 //restDB
-let settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://speedhighscore-427e.restdb.io/rest/typingspeed/",
-    "method": "GET",
-    "headers": {
-      "content-type": "application/json",
-      "x-apikey": "602eb73c5ad3610fb5bb636d",
-      "cache-control": "no-cache"
-    },
-}
-var highScore = Math.floor(words/time * 60)
+var score;
+var highscore;
+var average;
 
-$.ajax(settings).done(function (response) {
-    highScore = response[0].highscore
+statsbtn.addEventListener("click", function(){
+    $("#stats").show();
+    document.getElementById('highestscore').innerHTML = highscore;
+    document.getElementById('avescore').innerHTML = average;
 });
+
+
+
+
+
