@@ -72,3 +72,24 @@ newGame.addEventListener("click", function(){
     console.log(answer);
 });
 
+var score;
+var highscore;
+var average;
+
+statsbtn.addEventListener("click", function () {
+  $("#newGame").hide();
+  $("#highestScore").show();
+  $("#aveScore").show();
+  $("#stopwatch").hide();
+  $("#statsbtn").hide();
+  $("#back").show();
+});
+
+back.addEventListener("click", function () {
+    $("#newGame").show();
+    $("#highestScore").hide();
+    $("#aveScore").hide();
+    $("#stopwatch").show();
+    $("#statsbtn").show();
+    $("#back").hide();
+  });
