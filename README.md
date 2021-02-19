@@ -80,6 +80,7 @@ Some values were getting saved in my restDB that were not numbers, resulting in 
 
 A problem faced was that variables were not being carried over to/from functions for restDB from/to different functions in javascript, even though the variables were established outside the functions, in the main javascript page. This was worked around, instead of solved.
  
+the api used for generating random sentences is in HTTP, not HTTPS, so it cannot run in the published gitHub website. However, it can run in the live server
 <!--
 Credits
 Content
