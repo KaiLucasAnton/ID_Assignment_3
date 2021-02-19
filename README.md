@@ -109,3 +109,7 @@ Link to Github:
 https://github.com/KaiLucasAnton/ID_Assignment_3
  
 restDB link:
+typing speed: https://highscore-2d4d.restdb.io/rest/typingspeed  
+number memory: https://highscore-2d4d.restdb.io/rest/numbermemory  
+
+published link: https://kailucasanton.github.io/ID_Assignment_3/ (speed typing game does not work, due to api being http)
