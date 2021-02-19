@@ -3,6 +3,8 @@
 
     <head>
         <title>Spend-Thrifty</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
         <!-- <link href="number.css" rel="stylesheet" type="text/css"/> -->
         <link href="style.css" rel="stylesheet" type="text/css"/>
         <!-- Baskerville -->
@@ -34,14 +36,10 @@
             <div class="n-content">
                 <div class="n-info">
                     <p class="num-header">Test your ability to remember numbers</p>
-                    <br>
                     <button class="button" id = "randNum" type="button" onclick="document.getElementById('num').innerHTML = 
                     randNo()">Start</button>
                     <p id="level"></p>
-                    <div id = "numTime" style="display: none;">
-                        <p id = "num" ></p>
-                        <!-- <progress id="file" value="0" max="100" > </progress> -->
-                    </div>
+                    <p id = "num" ></p>
                     <form id="submittion" onsubmit="return false" autocomplete="off" style="display: none;">
                         <input type="text" name="ans" id="ans"></br>
                         <br>
@@ -52,18 +50,26 @@
                     onclick="document.getElementById('num').innerHTML = 
                     randNo()">Continue</button>
                     <div id="gameOver" style="display: none;">
-                        <p id="correctAns"></p>
-                        <p id="yourAns"></p>
-                        <br>
+                        <div id="anss">
+                            <p id="correctAns"></p>
+                            <p id="yourAns"></p><br>
+                        </div>
+                        
+                        <div id="stats" style="display: none;">
+                            <p id="highestScore">HS</p>
+                            <p id="aveScore">AVE</p><br>
+                        </div>
+                        <button class="button" id="statsbtn" type="button">Stats</button>
                         <button class="button" id = "newGame" type="button">New Game</button>
+                        <button class="button" id="back" type="button" style="display: none;">Back</button>
                     </div>
                 </div>
             </div>
         </div>
-
+        <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
         <script src="app.js"></script>
-        <!-- <script src="script.js"></script> -->
         <script src="number.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
     </body>
 </html> 
