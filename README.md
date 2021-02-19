@@ -87,6 +87,7 @@ I received inspiration for this project from X
  
 for the link bar and burger in mobile mode: https://www.youtube.com/watch?v=gXkqy0b4M5g
 for the blinking box in reaction speed: https://css-tricks.com/snippets/javascript/function-with-random-timer/
+Speed typing test is referenced from: https://www.geeksforgeeks.org/design-a-typing-speed-test-game-using-javascript/
  
 Number Memory:
 random numbers when button is clicked: https://www.w3schools.com/js/tryit.asp?filename=tryjs_random_function
@@ -95,6 +96,7 @@ making the number disappear: https://www.drupal.org/project/messagefx/issues/724
 Speed Test API:
 http://api.quotable.io/random
 stopwatch: https://dev.to/gspteck/create-a-stopwatch-in-javascript-2mak
+
  
 Link to Github:
 https://github.com/KaiLucasAnton/ID_Assignment_3
