@@ -72,7 +72,13 @@ You should also mention in this section any interesting bugs or problems you dis
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
 -->
  
-XXX
+We used JQuery to make it more convenient to hide and show parts of the html for each stage of the games; showing the quote and quote input bubble in the typing speed test, then hiding it and showing the new game bubble after the user finished typing out the quote.($(".quote-display").show(); or $(".quote-display").hide();)
+We also used JQuery to retreive values for testing (console.log($('#ans')[0].value);) or to change those values ($('#ans')[0].value = "";)
+
+Some Bugs found were:
+Some values were getting saved in my restDB that were not numbers, resulting in my average score/ average number being displayed as NAN. The problem was caused as the name of some of the IDs were changed to streamline the process, but one was overlooked.
+
+A problem faced was that variables were not being carried over to/from functions for restDB from/to different functions in javascript, even though the variables were established outside the functions, in the main javascript page. This was worked around, instead of solved.
  
 <!--
 Credits
@@ -99,3 +105,4 @@ stopwatch: https://dev.to/gspteck/create-a-stopwatch-in-javascript-2mak
 Link to Github:
 https://github.com/KaiLucasAnton/ID_Assignment_3
  
+restDB link:
