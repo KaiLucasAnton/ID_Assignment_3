@@ -94,7 +94,7 @@ function endGame() {
         } 
       }
       console.log(highscore);
-      document.getElementById("highestScore").innerHTML = "Highscore: level " + highscore;
+      document.getElementById("highestScore").innerHTML = "Highscore: Level " + highscore;
     });
   
     //average score
@@ -105,7 +105,7 @@ function endGame() {
         total += response[i].score;
       }
       average = total / i;
-      document.getElementById("aveScore").innerHTML = "Average Speed: level " + Math.floor(average);
+      document.getElementById("aveScore").innerHTML = "Average Level: Level " + Math.floor(average);
     });
   
     let settings2 = {
