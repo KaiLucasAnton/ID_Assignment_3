@@ -112,4 +112,5 @@ restDB link:
 typing speed: https://highscore-2d4d.restdb.io/rest/typingspeed  
 number memory: https://highscore-2d4d.restdb.io/rest/numbermemory  
 
-
+Link to Pitch video: 
+https://drive.google.com/file/d/1HheutleiR0oIRsiHdoQf08EV6ASQLuyF/view?usp=sharing
